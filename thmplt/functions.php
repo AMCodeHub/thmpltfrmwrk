@@ -671,6 +671,16 @@ function thmplt_filter_delete($tag, $func, $priority ){
 	}
 }
 
+/** 
+ *  Adds 'img-responsive' class to all images embeded in the post content 
+ */
+function add_image_class($class){
+    $class .= ' img-responsive';
+    return $class;
+}
+add_filter('get_image_tag_class','add_image_class');
+
+
 //Fix for Add_this filters
 function thmplt_remove_addthis_from_filters(){
 	
